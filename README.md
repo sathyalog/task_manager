@@ -9,12 +9,19 @@ You can download and modify it based on your requirement. Current scope is to ad
 
 #installation
 Expecting nodejs, java pre installed in machine.
+
 1.	Run npm install and bower install
+
 2.	Npm install –g json-server ( change host(H) as 127.0.0.1 and port(p) 3001 in users/username/appdata/roaming/npm/node_modules/json-server/bin/index.js)
+
 3.	Npm install –g protractor
+
 4.	Npm install –g gulp
+
 5.	Webdriver-manager update
+
 6.	Webdriver-manager start
+
 Gulp serve-dev to run the application. Prior to that open cmd and goto mockserver folder and run json-server db.json
 
 #e2e Test cases

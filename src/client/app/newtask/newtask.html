@@ -1,0 +1,67 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                
+                <div class="widget wviolet">
+                    <div ht-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                    <ng-form name="form" data-toggle="validator">
+                        <!-- <h3>TODO: Implement Your Features</h3> -->
+                        <div class="row">
+                       <div class="col-md-3"><label for="title">Enter Title</label></div>
+                       <div class="col-md-8"><input type="text" id="title" ng-model="vm.taskTitle" ng-required="true"></div>
+                       </div>
+                       <br/>
+                       <div class="row">
+                       <div class="col-md-3"><label for="projectName">Project Name</label></div>
+                       <div class="col-md-8"><input type="text" id="projectName" ng-model="vm.projectName" class="form-control" required></div>
+                       </div>
+                       <br/>
+                       <div class="row">
+                       <div class="col-md-3"><label for="description">Description</label></div>
+                       <div class="col-md-8"><textarea id="description" ng-model="vm.taskDesc" class="form-control"  rows="3" required></textarea></div>
+                       </div>
+                       <br/>
+
+                       <div class="row">
+                       <div class="col-md-3"><label for="time">Time Spent</label></div>
+                       <div class="col-md-2">
+                           <select class="form-control" ng-model="vm.taskHrs" ng-change="vm.updateTime()" required>
+                                
+                              <option value="1" >1 hr</option>
+                              <option value="2">2 hrs</option>
+                              <option value="3">3 hrs</option>
+                              <option value="4">4 hrs</option>
+                              <option value="5">5 hrs</option>
+                              <option value="6">6 hrs</option>
+                              <option value="7">7 hrs</option>
+                              <option value="8">8 hrs</option>
+                            </select>
+                       </div>
+                       <div class="col-md-2">{{vm.currentTime}}</div>
+                       </div>
+                       <br/>
+
+                       <div class="row">
+                       <div class="col-md-3"><label for="status">Status</label></div>
+                       <div class="col-md-3"><input type="checkbox" id="status" ng-model="vm.taskStatus" value="Completed">Completed</div>
+                       </div>
+                       <br/>
+                       <div class="row">
+                       <div class="col-md-3"> </div>
+                       <div class="col-md-8"><button type="button"  id="button" class="btn btn-success" ng-click="vm.submit(form)">Submit</button></div>
+                       </div>
+                       <div class="help-block with-errors"></div>
+                       </ng-form>
+
+                    </div>
+
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,40 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row"><br/>
+                <div><button type="button"  id="createTask" class="btn btn-info" ng-click="vm.next()">Create Task</button></div>
+                <div class="widget wviolet">
+                    <div ht-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <h3>List of tasks created</h3>
+                        
+                        <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Task Title</th>
+                                <th>Status</th>
+                                <th>Modify</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="col in vm.listvalues">
+                            <td>{{col.taskTitle}}</td>
+                            <td>{{col.taskStatus}}</td>
+                            
+                            <td><a  class="col-md-2" ng-click="vm.edit(col.id,col.taskStatus)">{{col.show}}</a> &nbsp; <a ng-click="vm.deleteTask(col.id)">Delete</a> </td>
+                        </tr>
+                        
+                    </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

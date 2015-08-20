@@ -13,7 +13,7 @@
     }
 
     var config = {
-        appErrorPrefix: '[10miles Error] ',
+        appErrorPrefix: '[project miles Error] ',
         appTitle: 'Project Miles',
         baseURL:"http://127.0.0.1:3001"
     };
